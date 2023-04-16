@@ -15,12 +15,7 @@ public class LocaleResolver implements LocaleContextResolver {
     @Override
     public LocaleContext resolveLocaleContext(ServerWebExchange exchange) {
         String language = exchange.getRequest().getHeaders().getFirst("Accept-Language");
-
-        Locale targetLocale = Locale.getDefault();
-        if (StringUtils.isNotEmpty(language)) {
-            targetLocale = Locale.forLanguageTag(language);
-        }
-        return new SimpleLocaleContext(targetLocale);
+        return new SimpleLocaleContext(StringUtils.isNotEmpty(language) ? Locale.forLanguageTag(language) : Locale.getDefault());
     }
 
     @Override

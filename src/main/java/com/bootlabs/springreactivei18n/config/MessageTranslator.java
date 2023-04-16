@@ -14,16 +14,16 @@ import java.util.Objects;
  * this class is responsible for choosing the right message based on the locale specified or/and arguments.
  */
 @Component
-public class Translator {
+public class MessageTranslator {
 
     private static MessageSource messageSource;
 
     private static LocaleResolver localeResolver;
 
     @Autowired
-    Translator(MessageSource messageSource, LocaleResolver localeResolver) {
-        Translator.messageSource = messageSource;
-        Translator.localeResolver = localeResolver;
+    MessageTranslator(MessageSource messageSource, LocaleResolver localeResolver) {
+        MessageTranslator.messageSource = messageSource;
+        MessageTranslator.localeResolver = localeResolver;
     }
 
     /**
