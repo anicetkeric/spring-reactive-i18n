@@ -4,7 +4,7 @@ Spring WebFlux Rest API internationalization i18n
 
 ## Tech Stack
 
-**Spring-WebFluxx**, **maven**, **java17**, **i18n**
+**Spring-WebFlux**, **maven**, **java17**, **i18n**
 
 ## Run Locally
 
